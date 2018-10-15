@@ -1,0 +1,125 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+/*Body CSS*/
+body {
+    font-family: "Poppins";
+    background: #fafafa;
+}
+
+/*Tells that links should take color from its parent component*/
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+/*Makes Wrapper components use flex*/
+.wrapper {
+    display: flex;
+    width: 30%;
+    align-items: stretch;
+}
+
+/*Set color for sidebar*/
+#sidebar {
+    background: #e8eaed;
+    min-width: 235px;
+    max-width: 235px;
+    color: #000000;
+    min-height: 100vh;
+}
+
+#sidebar .sidebar-header {
+    background: #d4d8dd;
+    padding: 20px;
+    padding-bottom: 1px;
+    padding-top: 10px;
+}
+
+#sidebar .sidebar-header h1 {
+    font-size: 1.9em;
+}
+
+#sidebar .sidebar-header p {
+    font-size: 0.7em;
+}
+
+#sidebar ul.components {
+    padding: 10px 0;
+    border-bottom: 1px solid #404244;
+}
+
+#sidebar ul li a {
+    padding: 10px 30px;
+    font-size: 1.3em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #fff;
+    background: #f47c48;
+}
+
+#sidebar ul li.active {
+    background: #ffffff;
+}
+
+#sidebar ul li a[aria-expanded="true"] {
+    color: #fff;
+    background: #f47c48;
+}
+
+/*To make the triangle on the right*/
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.sidebar .dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+/*Menus in menus*/
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 50px !important;
+    color: #fff;
+    background: #f58e62;
+}
+
+.debugmargin {
+    border: 1px blue solid;
+}
+
+.shadowed {
+    box-shadow: 2px 21px 53px -21px rgba(0, 0, 0, 1);
+}
+
+#sidebarToggle {
+    background: #e8eaed;
+    position: absolute;
+    margin: 0px;
+    margin-top: 9px;
+}
+
+.navbar-brand {
+    margin-left: 10px;
+    margin-right: 65xpx;
+}
+
+.nav-item {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+.logo{
+    width:auto;
+    height:30px;
+    margin:0px;
+    border: 0px;
+}

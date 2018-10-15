@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="http://livejs.com/live.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadowed">
+            <img class="logo" src="images/logo/logo2.png"/>
+            <a class="navbar-brand" href="#">INFOHOLIC</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="askquestion.html">Ask Something</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        My Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Friends</a>
+                        <a class="dropdown-item" href="#">Activity</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Log Out</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+        </nav>
+    </div>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <!--<div class="sidebar-header">
+                <h1>INFOHOLIC</h1>
+                <p>
+                    Information deliverd to you
+                </p>
+            </div>--->
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#"><img src="images/sidebar/outline-person_pin-24px.svg"> Your Stories</a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/sidebar/books.svg" /> Top Stories</a>
+                </li>
+
+            </ul>
+            <ul class="list-unstyled">
+                <li>
+                    <a href="#"><img src="images/sidebar/outline-rowing-24px.svg" /> Sports</a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/sidebar/outline-important_devices-24px.svg" /> Technology</a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/sidebar/hat.svg" /> Academics</a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/sidebar/outline-public-24px.svg" /> Politics</a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/sidebar/outline-filter_vintage-24px.svg" /> Science</a>
+                </li>
+                <li>
+                    <a href="#moreSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">More</a>
+                    <ul class="collapse list-unstyled" id="moreSubmenu">
+                        <li>
+                            <a href="#"><img src="images/sidebar/baseline-local_movies-24px.svg" /> Entertainment</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/sidebar/baseline-local_hospital-24px.svg" /> Health</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/sidebar/baseline-business_center-24px.svg" /> Bussiness / Finance</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
